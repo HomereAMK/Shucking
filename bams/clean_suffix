@@ -1,0 +1,4 @@
+for i in bams/*.bam
+do
+    mv "$i" "`echo $i | sed 's/.dedup_clipoverlap_realigned//'`"
+done

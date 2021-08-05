@@ -1,0 +1,33 @@
+# Global variables
+#AGA_23*.bam HAUG_02*.bam NISS_49*.bam SPA_16*.bam TOLL_04*.bam INNE_20*.bam
+DATAOUTPUT="05_dedup"
+DATAINPUT="04_mapped"
+base=__BASE__
+
+#scripts MarkDuplicates
+java -jar /services/tools/picard-tools/2.6.0/picard.jar MarkDuplicatesWithMateCigar \
+I="$DATAINPUT"/AGA_23_EKDL200012859-1a-AK11426-AK5939_HNLVYDSXY_L1.sort.bam \
+O="$DATAOUTPUT"/AGA_23.dedup.bam \
+M="$DATAOUTPUT"/AGA_23.duprmmetrics.txt \
+REMOVE_DUPLICATES=true VALIDATION_STRINGENCY=SILENT
+
+#scripts ClipOverlap
+/services/tools/bamutil/1.0.14/bam clipOverlap \
+--in "$DATAOUTPUT"/AGA_23.dedup.bam \
+--out "$DATAOUTPUT"/AGA_23.dedup_clipoverlap.bam \
+--stats
+
+
+
+#scripts MarkDuplicates
+java -jar /services/tools/picard-tools/2.6.0/picard.jar MarkDuplicatesWithMateCigar \
+I="$DATAINPUT"/NISS_49_EKDL200012859-1a-AK11710-AK16288_HNLVYDSXY_L1.sort.bam \
+O="$DATAOUTPUT"/NISS_49.dedup.bam \
+M="$DATAOUTPUT"/NISS_49.duprmmetrics.txt \
+REMOVE_DUPLICATES=true VALIDATION_STRINGENCY=SILENT
+
+#scripts ClipOverlap
+/services/tools/bamutil/1.0.14/bam clipOverlap \
+--in "$DATAOUTPUT"/NISS_49.dedup.bam \
+--out "$DATAOUTPUT"/NISS_49.dedup_clipoverlap.bam \
+--stats

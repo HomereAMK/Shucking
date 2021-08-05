@@ -1,0 +1,8 @@
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/OpenOysters2/07_depth/*_depth.gz
+ls $BAMSDEPTH > list_depth
+
+
+
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/OpenOysters2/test_depth/*_depth.gz
+ls $BAMSDEPTH > list_testdepth
