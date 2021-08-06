@@ -1,9 +1,9 @@
 #!/bin/bash
 #PBS -d /home/projects/dp_00007/people/hmon/Shucking
 #PBS -W group_list=dp_00007 -A dp_00007
-#PBS -N __BASE__bwa
-#PBS -e 98_log_files/Map/__BASE__bwa.err
-#PBS -o 98_log_files/Map/__BASE__bwa.out
+#PBS -N bwa__BASE__
+#PBS -e 98_log_files/Map/bwa__BASE__.err
+#PBS -o 98_log_files/Map/bwa__BASE__.out
 #PBS -l nodes=2:ppn=10:thinnode
 #PBS -l walltime=00:02:00:00
 #PBS -l mem=60g
@@ -57,13 +57,13 @@ base=__BASE__
         # Create bam file
     echo "Creating bam for $base"
 
-    samtools view -bS -h -q 20 -F 4 \
+    samtools view -bS -h -q 10 -F 4 \
     "$DATAOUTPUT"/"$base".sam >"$DATAOUTPUT"/"$base".bam
 
 
      echo "Creating sorted bam for $base"
-        samtools sort "$DATAOUTPUT"/"$base".bam -o "$DATAOUTPUT"/"$base".sort.minq20.bam
-        samtools index "$DATAOUTPUT"/"$base".sort.minq20.bam
+        samtools sort "$DATAOUTPUT"/"$base".bam -o "$DATAOUTPUT"/"$base".sort.minq10.bam
+        samtools index "$DATAOUTPUT"/"$base".sort.minq10.bam
    
    # Clean up
     echo "Removing "$DATAOUTPUT"/"$base".sam"

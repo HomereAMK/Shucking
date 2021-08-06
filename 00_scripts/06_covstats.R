@@ -32,7 +32,7 @@ for (i in 1:length(bam_list)){
   }
 }
 print(output)
-
+write_csv(output, path="/home/projects/dp_00007/people/hmon/Shucking/output_Lib2.csv")  #change path
 output2 <- output %>%
   mutate(across(where(is.numeric), round, 3))%>% 
   write_csv(output2, path = "samplespe_per_base_depth_presenceData.csv")

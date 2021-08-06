@@ -39,6 +39,6 @@ java -jar /services/tools/trimmomatic/0.38/trimmomatic-0.38.jar PE \
         03_trimmed/"$base"_1.single.fq.gz \
         03_trimmed/"$base"_2.paired.fq.gz \
         03_trimmed/"$base"_2.single.fq.gz \
-        ILLUMINACLIP:$ADAPTERS:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:50
+        ILLUMINACLIP:$ADAPTERS:2:30:10:1:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:40
         
         
