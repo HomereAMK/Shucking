@@ -31,7 +31,7 @@ module load samstat/1.5.1
 
 
 #variables
-DATAOUTPUT="97_stats_bamfiles"
+DATAOUTPUT="QC/FastQC"
 DATAINPUT="02_data"
 base=__BASE__
 

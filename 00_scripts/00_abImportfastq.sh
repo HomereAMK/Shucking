@@ -11,4 +11,4 @@
 #PBS -r n
 
 #cp fq.gz
-scp /home/projects/dp_00007/people/hmon/Novogene/lib2_2/flac_lib2/ZECE_01*.fq.gz ./02_data
+scp /home/projects/dp_00007/people/hmon/Novogene/lib2_2/flac_lib2/*.fq.gz ./02_data

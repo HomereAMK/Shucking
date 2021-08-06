@@ -5,7 +5,7 @@
 #PBS -e 98_log_files/Covstat/covstat.err
 #PBS -o 98_log_files/Covstat/covstat.out
 #PBS -l nodes=2:ppn=40
-#PBS -l walltime=06:00:00
+#PBS -l walltime=100:00:00
 #PBS -l mem=260gb
 #PBS -m n
 #PBS -r n
