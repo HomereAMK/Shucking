@@ -43,3 +43,4 @@ fastqc "$DATAINPUT"/"$base"_2.fq.gz
 
 #moveThatShit
 mv 02_data/*.html "$DATAOUTPUT"
+mv 02_data/*.zip "$DATAOUTPUT"
