@@ -5,7 +5,7 @@
 #PBS -e 98_log_files/Import/unzip.err
 #PBS -o 98_log_files/Import/unzip.out
 #PBS -l nodes=1:ppn=4:thinnodels
-#PBS -l walltime=300:00:00
+#PBS -l walltime=100:00:00
 #PBS -l mem=12gb
 #PBS -m n
 #PBS -r n
