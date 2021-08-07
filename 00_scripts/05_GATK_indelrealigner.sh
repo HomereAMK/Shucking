@@ -20,6 +20,7 @@ cd $PBS_O_WORKDIR
 NPROCS=`wc -l < $PBS_NODEFILE`
 echo This job has allocated $NPROCS nodes
 
+#ressources
 module load tools
 module load ngs
 module load samtools/1.9
