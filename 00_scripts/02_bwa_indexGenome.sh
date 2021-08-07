@@ -45,6 +45,6 @@ samtools faidx "$REFERENCE"
 java -jar /services/tools/picard-tools/2.6.0/picard.jar \
 CreateSequenceDictionary \
 R="$REFERENCE" \
-O="$REFBASENAME".dict
+O=01_infofiles/"$REFBASENAME".dict
 
 #bowtie2-build $REFERENCE $REFBASENAME
