@@ -72,4 +72,4 @@ base=__BASE__
         rm "$DATAOUTPUT"/"$base".sam
         rm "$DATAOUTPUT"/"$base".bam
 
-    
+    bwa mem -t 8 01_infofiles/fileOegenome10scaffoldC3G.fasta ZECE_17_EKDL210005548-1a-AK10139-AK9682_HHJKNDSX2_L4_1.paired.fq.gz ZECE_17_EKDL210005548-1a-AK10139-AK9682_HHJKNDSX2_L4_2.paired.fq.gz
