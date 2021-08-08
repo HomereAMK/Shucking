@@ -36,8 +36,8 @@ REFERENCE="01_infofiles/fileOegenome10scaffoldC3G.fasta"   # This is a fasta fil
 REFBASENAME="fileOegenome10scaffoldC3G"
 
 #bwa_index
-bwa index -b bwtsw 01_infofiles/fileOegenome10scaffoldC3G.fasta
-
+#bwa index -b bwtsw 01_infofiles/fileOegenome10scaffoldC3G.fasta
+bwa index 01_infofiles/fileOegenome10scaffoldC3G.fasta
 #samtools faidx
 samtools faidx "$REFERENCE"
 
