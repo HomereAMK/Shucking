@@ -74,7 +74,7 @@ base=__BASE__
 
 #map only on scaffold5
 # because of a possible inversin at the begin of the chr for the scandinavian populations (see  )
-GENOME="01_infofiles/scaffold5"
+GENOME="01_infofiles/scaffold5.fa"
 bwa mem -t "$NCPU" \
         -R "$ID" \
         "$GENOME" \

@@ -59,9 +59,11 @@ Because possible inversion at the beginning of chr 5
 <img src="Rplots/NISS_INNEManhattanfst15kb_5indperPopsnptdata2.tiff" width="49%" height="20%" />
 
 <br>
+
 ```
 chmod +x 00_scripts/03_bwa_mem_launch.sh
 ```
+
 ```
  00_scripts/03_bwa_mem_launch.sh
 ```
