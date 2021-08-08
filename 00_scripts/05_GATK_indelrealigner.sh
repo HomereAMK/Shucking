@@ -49,22 +49,22 @@ base=__BASE__
 #samtools faidx $GENOME
 
 # Index bam files
-samtools index "$DATAINPUT"/"$base".dedup_clipoverlap.bam
+samtools index "$DATAINPUT"/"$base".dedup_clipoverlap.minq10.bam
 
 ## Create list of potential in-dels
 java -jar /services/tools/gatk/3.8-0/GenomeAnalysisTK.jar \
 -T RealignerTargetCreator \
 -R $GENOME \
--I "$DATAINPUT"/"$base".dedup_clipoverlap.bam \
--o "$DATAOUTPUT"/"$base".all_samples_for_indel_realigner.intervals 
+-I "$DATAINPUT"/"$base".dedup_clipoverlap.minq10.bam \
+-o "$DATAOUTPUT"/"$base".all_samples_for_indel_realigner.minq10.intervals 
 
 ## Run the indel realigner tool
 java -jar /services/tools/gatk/3.8-0/GenomeAnalysisTK.jar \
 -T IndelRealigner \
 -R $GENOME \
--I "$DATAINPUT"/"$base".dedup_clipoverlap.bam \
--targetIntervals "$DATAOUTPUT"/"$base".all_samples_for_indel_realigner.intervals \
---consensusDeterminationModel USE_READS  --nWayOut _realigned.bam
+-I "$DATAINPUT"/"$base".dedup_clipoverlap.minq10.bam \
+-targetIntervals "$DATAOUTPUT"/"$base".all_samples_for_indel_realigner.minq10.intervals \
+--consensusDeterminationModel USE_READS  --nWayOut _minq10.realigned.bam
 
 ##
 mv *realigned.bam 06_realigned/

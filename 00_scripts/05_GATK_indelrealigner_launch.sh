@@ -7,7 +7,7 @@ rm 00_scripts/REALIGNINDEL*sh
 
 # launch scripts for Colosse
 
-for file in $(ls 05_dedup/*dedup_clipoverlap.bam|sed -e 's/.dedup_clipoverlap.bam//g'|sort -u)
+for file in $(ls 05_dedup/*.dedup_clipoverlap.minq10.bam |sed -e 's/.dedup_clipoverlap.minq10.bam//g'|sort -u)
 do
 
 base=$(basename "$file")

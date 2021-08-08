@@ -84,5 +84,4 @@ samtools view -bS -h -q 10 -F 4 \
     "$DATAOUTPUT"/"$base".sam >"$DATAOUTPUT"/"$base".bam
 
 samtools sort "$DATAOUTPUT"/"$base".bam -o "$DATAOUTPUT"/"$base".sort.minq10.scaffold5.bam
-
 samtools index "$DATAOUTPUT"/"$base".sort.minq10.scaffold5.bam
