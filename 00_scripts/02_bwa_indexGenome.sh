@@ -4,9 +4,9 @@
 #PBS -N IndexGenome
 #PBS -e 98_log_files/Map/IndexGenome.err
 #PBS -o 98_log_files/Map/IndexGenome.out
-#PBS -l nodes=1:ppn=4:thinnode
-#PBS -l walltime=00:02:00:00
-#PBS -l mem=20g
+#PBS -l nodes=2:ppn=4:thinnode
+#PBS -l walltime=00:04:00:00
+#PBS -l mem=50g
 #PBS -m n
 #PBS -r n
 
@@ -36,7 +36,7 @@ REFERENCE="01_infofiles/fileOegenome10scaffoldC3G.fasta"   # This is a fasta fil
 REFBASENAME="fileOegenome10scaffoldC3G"
 
 #bwa_index
-bwa index -a is 01_infofiles/fileOegenome10scaffoldC3G.fasta 5.37N
+bwa index -a is 01_infofiles/fileOegenome10scaffoldC3G.fasta #5.37N
 bwa index -a bwtsw 01_infofiles/fileOegenome10scaffoldC3G.fasta
 #samtools faidx
 samtools faidx "$REFERENCE"
