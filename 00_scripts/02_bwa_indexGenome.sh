@@ -6,7 +6,7 @@
 #PBS -o 98_log_files/Map/IndexGenome.out
 #PBS -l nodes=2:ppn=4:thinnode
 #PBS -l walltime=00:04:00:00
-#PBS -l mem=50g
+#PBS -l mem=100g
 #PBS -m n
 #PBS -r n
 
@@ -48,3 +48,18 @@ R="$REFERENCE" \
 O=01_infofiles/"$REFBASENAME".dict
 
 #bowtie2-build $REFERENCE $REFBASENAME
+
+
+#Index each chromosome of the genome of Ostrea edulis
+# 1.bwa index
+for file in 01_infofiles/scaffold* ; do
+    bwa index -a is "$file" 
+done
+
+# 2.picard dict
+for file in 01_infofiles/scaffold* ; do
+    java -jar /services/tools/picard-tools/2.6.0/picard.jar \
+    CreateSequenceDictionary \
+    R="$file" \
+    O="$file".dict
+done
