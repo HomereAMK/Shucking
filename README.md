@@ -127,3 +127,12 @@ https://github.com/BelenJM
 https://github.com/mfumagalli/Copenhagen
 
 https://github.com/therkildsen-lab
+
+
+#Number of base per scaffold
+``` grep -v '>' 01_infofiles/scaffold2| sed -e 's/\(.\)/&\n/g' | wc -l ```
+
+#scaffold1 - 118329717
+#scaffold2 - 115608069
+#scaffold3 - 101022135
+#scaffold3

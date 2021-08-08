@@ -5,7 +5,7 @@
 #PBS -e 98_log_files/Map/bwa__BASE__.err
 #PBS -o 98_log_files/Map/bwa__BASE__.out
 #PBS -l nodes=2:ppn=10:thinnode
-#PBS -l walltime=00:02:00:00
+#PBS -l walltime=00:05:00:00
 #PBS -l mem=60g
 #PBS -m n
 #PBS -r n
@@ -72,4 +72,16 @@ base=__BASE__
         rm "$DATAOUTPUT"/"$base".sam
         rm "$DATAOUTPUT"/"$base".bam
 
-    bwa mem -t 8 01_infofiles/fileOegenome10scaffoldC3G.fasta ZECE_17_EKDL210005548-1a-AK10139-AK9682_HHJKNDSX2_L4_1.paired.fq.gz ZECE_17_EKDL210005548-1a-AK10139-AK9682_HHJKNDSX2_L4_2.paired.fq.gz
+#map only on scaffold1
+GENOME="01_infofiles/scaffold1"
+bwa mem -t "$NCPU" \
+        -R "$ID" \
+        "$GENOME" \
+        "$DATAINPUT"/"$base"_1.paired.fq.gz "$DATAINPUT"/"$base"_2.paired.fq.gz >"$DATAOUTPUT"/"$base".sam
+
+samtools view -bS -h -q 10 -F 4 \
+    "$DATAOUTPUT"/"$base".sam >"$DATAOUTPUT"/"$base".bam
+
+samtools sort "$DATAOUTPUT"/"$base".bam -o "$DATAOUTPUT"/"$base".sort.minq10.scaffold1.bam
+
+samtools index "$DATAOUTPUT"/"$base".sort.minq10.scaffold1.bam
