@@ -52,7 +52,13 @@ module load bwa/0.7.15
 bwa index -b bwtsw 01_infofiles/fileOegenome10scaffoldC3G.fasta
 ```
 
-### 3-Bwa-mem
+### 3-Bwa-mem on entire genome and chr5 
+Because possible inversion at the beginning of chr 5
+<br>
+
+<img src="Rplots/NISS_INNEManhattanfst15kb_5indperPopsnptdata2.tiff" width="49%" height="20%" />
+
+<br>
 ```
 chmod +x 00_scripts/03_bwa_mem_launch.sh
 ```
