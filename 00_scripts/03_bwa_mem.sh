@@ -72,8 +72,9 @@ base=__BASE__
         rm "$DATAOUTPUT"/"$base".sam
         rm "$DATAOUTPUT"/"$base".bam
 
-#map only on scaffold1
-GENOME="01_infofiles/scaffold1"
+#map only on scaffold5
+# because of a possible inversin at the begin of the chr for the scandinavian populations (see  )
+GENOME="01_infofiles/scaffold5"
 bwa mem -t "$NCPU" \
         -R "$ID" \
         "$GENOME" \
@@ -82,6 +83,6 @@ bwa mem -t "$NCPU" \
 samtools view -bS -h -q 10 -F 4 \
     "$DATAOUTPUT"/"$base".sam >"$DATAOUTPUT"/"$base".bam
 
-samtools sort "$DATAOUTPUT"/"$base".bam -o "$DATAOUTPUT"/"$base".sort.minq10.scaffold1.bam
+samtools sort "$DATAOUTPUT"/"$base".bam -o "$DATAOUTPUT"/"$base".sort.minq10.scaffold5.bam
 
-samtools index "$DATAOUTPUT"/"$base".sort.minq10.scaffold1.bam
+samtools index "$DATAOUTPUT"/"$base".sort.minq10.scaffold5.bam
