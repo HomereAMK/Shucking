@@ -37,14 +37,14 @@ base=__BASE__
 
 #scripts MarkDuplicates
 java -jar /services/tools/picard-tools/2.6.0/picard.jar MarkDuplicatesWithMateCigar \
-I="$DATAINPUT"/"$base".sort.minq20.bam \
-O="$DATAOUTPUT"/"$base".dedup.bam \
+I="$DATAINPUT"/"$base".sort.minq10.bam \
+O="$DATAOUTPUT"/"$base".dedup.minq10.bam \
 M="$DATAOUTPUT"/"$base".duprmmetrics.txt \
 REMOVE_DUPLICATES=true VALIDATION_STRINGENCY=SILENT
 
 #scripts ClipOverlap
 /services/tools/bamutil/1.0.14/bam clipOverlap \
---in "$DATAOUTPUT"/"$base".dedup.bam \
---out "$DATAOUTPUT"/"$base".dedup_clipoverlap.bam \
+--in "$DATAOUTPUT"/"$base".dedup.minq10.bam \
+--out "$DATAOUTPUT"/"$base".dedup_clipoverlap.minq10.bam \
 --stats
 
