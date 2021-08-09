@@ -6,7 +6,7 @@ rm 00_scripts/DEPTH*sh
 
 # launch scripts for Colosse
 
-for file in $(ls 06_realigned/*.bam|sed -e 's/.nocig.dedup_clipoverlap.minq10_minq10.nocig.realigned.bam//'|sort -u))   #only the nocig retry
+for file in $(ls 06_realigned/*.bam|sed -e 's/.nocig.dedup_clipoverlap.minq10_minq10.nocig.realigned.bam//'|sort -u)  #only the nocig retry
 do
 
 base=$(basename "$file")
@@ -17,3 +17,4 @@ done
 
 #Submit jobs
 for i in $(ls 00_scripts/DEPTH*sh); do qsub $i; done
+
