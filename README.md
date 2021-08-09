@@ -124,6 +124,18 @@ ls -1 08_clean_bamMT/*.bam > 01_infofiles/list_bamMT
 [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)\
 [UniVec](https://www.ncbi.nlm.nih.gov/tools/vecscreen/univec/)
 
+module load fastqc/0.11.8
+module load samtools/1.10
+module load samstat/1.5.1
+module load fastp/0.20.1
+module load trimmomatic/0.38
+module load picard-tools/2.6.0
+module load parallel/20160822
+module load bamutil/1.0.14
+module load gatk/3.8-0
+module load jre/1.8.0-openjdk
+module load picard-tools/2.9.1
+
 # Citation
 
 Korneliussen T. S., Albrechtsen A. and Nielsen R. 2014. ANGSD: Analysis of Next Generation Sequencing Data. BMC Bioinformatics. DOI: 10.1186/s12859-014-0356-4

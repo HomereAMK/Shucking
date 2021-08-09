@@ -85,3 +85,10 @@ samtools view -bS -h -q 10 -F 4 \
 
 samtools sort "$DATAOUTPUT"/"$base".bam -o "$DATAOUTPUT"/"$base".sort.minq10.scaffold5.bam
 samtools index "$DATAOUTPUT"/"$base".sort.minq10.scaffold5.bam
+
+# Clean up
+    echo "Removing "$DATAOUTPUT"/"$base".sam"
+    echo "Removing "$DATAOUTPUT"/"$base".bam"
+
+        rm "$DATAOUTPUT"/"$base".sam
+        rm "$DATAOUTPUT"/"$base".bam
