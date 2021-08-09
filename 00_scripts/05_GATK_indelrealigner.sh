@@ -23,7 +23,7 @@ echo This job has allocated $NPROCS nodes
 #ressources
 module load tools
 module load ngs
-module load samtools/1.11
+module load samtools/1.12
 module load parallel/20160822
 module load java/1.8.0
 module load bamutil/1.0.14
@@ -68,3 +68,5 @@ java -jar /services/tools/gatk/3.8-0/GenomeAnalysisTK.jar \
 
 ##
 mv *realigned.bam 06_realigned/
+mv *realigned.bai 06_realigned/
+
