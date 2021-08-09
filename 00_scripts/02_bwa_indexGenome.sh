@@ -24,7 +24,7 @@ echo This job has allocated $NPROCS nodes
 module load tools
 module load ngs
 module load bwa/0.7.17
-module load samtools/1.11
+module load samtools/1.12
 module load jre/1.8.0
 module load picard-tools/2.6.0
 module load parallel/20160822

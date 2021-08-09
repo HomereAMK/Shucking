@@ -26,7 +26,7 @@ module load anaconda3/4.4.0
 module load jre/1.8.0-openjdk
 module load perl/5.20.1
 module load fastqc/0.11.8
-module load samtools/1.10
+module load samtools/1.12
 module load samstat/1.5.1
 
 

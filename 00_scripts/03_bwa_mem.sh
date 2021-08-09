@@ -32,7 +32,7 @@ module load gcc/8.2.0
 module load tools
 module load ngs
 module load bwa/0.7.17
-module load samtools/1.11
+module load samtools/1.12
 
 
 # Global variables
