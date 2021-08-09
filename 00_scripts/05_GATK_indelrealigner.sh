@@ -62,7 +62,7 @@ java -jar /services/tools/gatk/3.8-0/GenomeAnalysisTK.jar \
 java -jar /services/tools/gatk/3.8-0/GenomeAnalysisTK.jar \
 -T IndelRealigner \
 -R $GENOME \
--I "$DATAINPUT"/"$base".dedup_clipoverlap.minq10.bam \
+-I "$DATAINPUT"/"$base".nocig.dedup_clipoverlap.minq10.bam \
 -targetIntervals "$DATAOUTPUT"/"$base".all_samples_for_indel_realigner.nocig.minq10.intervals \
 --consensusDeterminationModel USE_READS  --nWayOut _minq10.nocig.realigned.bam
 
