@@ -61,3 +61,5 @@ REMOVE_DUPLICATES=true VALIDATION_STRINGENCY=SILENT
 --in "$DATAOUTPUT"/"$base".nocig.dedup.minq10.bam \
 --out "$DATAOUTPUT"/"$base".nocig.dedup_clipoverlap.minq10.bam \
 --stats
+
+#KEPT the nocig 
