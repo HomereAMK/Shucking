@@ -4,9 +4,9 @@
 #PBS -N markdupnClip__BASE__
 #PBS -e 98_log_files/DuplicateClip/__BASE__markdnClip.err
 #PBS -o 98_log_files/DuplicateClip/__BASE__markdnClip.out
-#PBS -l nodes=1:ppn=12 # number of nodes, til 28
+#PBS -l nodes=2:ppn=12 # number of nodes, til 28
 #PBS -l walltime=02:00:00
-#PBS -l mem=20g
+#PBS -l mem=100g
 #PBS -m n
 #PBS -r n
 
@@ -25,7 +25,7 @@ TIMESTAMP=$(date +%Y-%m-%d_%Hh%Mm%Ss)
 module load tools
 module load ngs
 module load jre/1.8.0
-module load picard-tools/2.6.0
+module load picard-tools/2.25.2
 module load parallel/20160822
 module load java/1.8.0
 module load bamutil/1.0.14
@@ -36,15 +36,28 @@ DATAINPUT="04_mapped"
 base=__BASE__
 
 #scripts MarkDuplicates
-java -jar /services/tools/picard-tools/2.6.0/picard.jar MarkDuplicatesWithMateCigar \
+java -jar /services/tools/picard-tools/2.25.2/picard.jar MarkDuplicatesWithMateCigar \
 I="$DATAINPUT"/"$base".sort.minq10.bam \
-O="$DATAOUTPUT"/"$base".dedup.minq10.bam \
+O="$DATAOUTPUT"/"$base".cig.dedup.minq10.bam \
 M="$DATAOUTPUT"/"$base".duprmmetrics.txt \
 REMOVE_DUPLICATES=true VALIDATION_STRINGENCY=SILENT
 
 #scripts ClipOverlap
 /services/tools/bamutil/1.0.14/bam clipOverlap \
---in "$DATAOUTPUT"/"$base".dedup.minq10.bam \
---out "$DATAOUTPUT"/"$base".dedup_clipoverlap.minq10.bam \
+--in "$DATAOUTPUT"/"$base".cig.dedup.minq10.bam \
+--out "$DATAOUTPUT"/"$base".cig.dedup_clipoverlap.minq10.bam \
 --stats
 
+
+#tryout with NO CIGAR on MarkDuplicates
+java -jar /services/tools/picard-tools/2.25.2/picard.jar MarkDuplicates \
+I="$DATAINPUT"/"$base".sort.minq10.bam \
+O="$DATAOUTPUT"/"$base".nocig.dedup.minq10.bam \
+M="$DATAOUTPUT"/"$base".duprmmetrics.txt \
+REMOVE_DUPLICATES=true VALIDATION_STRINGENCY=SILENT
+
+#scripts ClipOverlap with NO CIGAR on MarkDuplicates
+/services/tools/bamutil/1.0.14/bam clipOverlap \
+--in "$DATAOUTPUT"/"$base".nocig.dedup.minq10.bam \
+--out "$DATAOUTPUT"/"$base".nocig.dedup_clipoverlap.minq10.bam \
+--stats
