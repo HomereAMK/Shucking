@@ -125,7 +125,7 @@ ls -1 08_clean_bamMT/*.bam > 01_infofiles/list_bamMT
 [UniVec](https://www.ncbi.nlm.nih.gov/tools/vecscreen/univec/)
 
 module load fastqc/0.11.8
-module load samtools/1.10
+module load samtools/1.12
 module load samstat/1.5.1
 module load fastp/0.20.1
 module load trimmomatic/0.38
@@ -150,9 +150,16 @@ https://github.com/therkildsen-lab
 
 
 #Number of base per scaffold
-``` grep -v '>' 01_infofiles/scaffold2| sed -e 's/\(.\)/&\n/g' | wc -l ```
+``` grep -v '>' 01_infofiles/scaffold8.fa| sed -e 's/\(.\)/&\n/g' | wc -l ```
 
-#scaffold1 - 118329717
-#scaffold2 - 115608069
-#scaffold3 - 101022135
-#scaffold3
+[By number of nucleotide per chromosome] 
+#scaffold1 - 118 329 717
+#scaffold2 - 115 608 069
+#scaffold3 - 101 022 135
+#scaffold4 -  99 643 137
+#scaffold5 -  99 336 626
+#scaffold6 -  97 367 949
+#scaffold7 -  86 101 142
+#scaffold8 -  60 452 549
+#scaffold9 -  54 077 584
+#scaffold10 - 53 140 546
