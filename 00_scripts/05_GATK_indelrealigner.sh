@@ -6,7 +6,7 @@
 #PBS -e 98_log_files/IndelRealign/__BASE__indelreal.err
 #PBS -l nodes=1:ppn=14 # number of nodes, til 28
 #PBS -l walltime=05:00:00
-#PBS -l mem=20g
+#PBS -l mem=80g
 #PBS -m n
 #PBS -r n
 
@@ -23,13 +23,13 @@ echo This job has allocated $NPROCS nodes
 #ressources
 module load tools
 module load ngs
-module load samtools/1.9
+module load samtools/1.11
 module load parallel/20160822
 module load java/1.8.0
 module load bamutil/1.0.14
 module load gatk/3.8-0
 module load jre/1.8.0-openjdk
-module load picard-tools/2.9.1
+module load picard-tools/2.25.2
 
 # Global variables
 DATAOUTPUT="06_realigned"
@@ -49,22 +49,22 @@ base=__BASE__
 #samtools faidx $GENOME
 
 # Index bam files
-samtools index "$DATAINPUT"/"$base".dedup_clipoverlap.minq10.bam
+samtools index "$DATAINPUT"/"$base".nocig.dedup_clipoverlap.minq10.bam 
 
 ## Create list of potential in-dels
 java -jar /services/tools/gatk/3.8-0/GenomeAnalysisTK.jar \
 -T RealignerTargetCreator \
 -R $GENOME \
--I "$DATAINPUT"/"$base".dedup_clipoverlap.minq10.bam \
--o "$DATAOUTPUT"/"$base".all_samples_for_indel_realigner.minq10.intervals 
+-I "$DATAINPUT"/"$base".nocig.dedup_clipoverlap.minq10.bam  \
+-o "$DATAOUTPUT"/"$base".all_samples_for_indel_realigner.nocig.minq10.intervals 
 
 ## Run the indel realigner tool
 java -jar /services/tools/gatk/3.8-0/GenomeAnalysisTK.jar \
 -T IndelRealigner \
 -R $GENOME \
 -I "$DATAINPUT"/"$base".dedup_clipoverlap.minq10.bam \
--targetIntervals "$DATAOUTPUT"/"$base".all_samples_for_indel_realigner.minq10.intervals \
---consensusDeterminationModel USE_READS  --nWayOut _minq10.realigned.bam
+-targetIntervals "$DATAOUTPUT"/"$base".all_samples_for_indel_realigner.nocig.minq10.intervals \
+--consensusDeterminationModel USE_READS  --nWayOut _minq10.nocig.realigned.bam
 
 ##
 mv *realigned.bam 06_realigned/
