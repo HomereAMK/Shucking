@@ -51,14 +51,14 @@ base=__BASE__
 # Index bam files
 samtools index "$DATAINPUT"/"$base".nocig.dedup_clipoverlap.minq10.bam 
 
-## Create list of potential in-dels
+## Create list of potential in-dels nocig
 java -jar /services/tools/gatk/3.8-0/GenomeAnalysisTK.jar \
 -T RealignerTargetCreator \
 -R $GENOME \
 -I "$DATAINPUT"/"$base".nocig.dedup_clipoverlap.minq10.bam  \
 -o "$DATAOUTPUT"/"$base".all_samples_for_indel_realigner.nocig.minq10.intervals 
 
-## Run the indel realigner tool
+## Run the indel realigner tool nocig
 java -jar /services/tools/gatk/3.8-0/GenomeAnalysisTK.jar \
 -T IndelRealigner \
 -R $GENOME \
