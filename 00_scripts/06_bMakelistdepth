@@ -3,3 +3,166 @@ ls $BAMSDEPTH > list_depth
 
 #BAMSDEPTH=/home/projects/dp_00007/people/hmon/OpenOysters2/test_depth/*_depth.gz
 #ls $BAMSDEPTH > list_testdepth
+
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/AGA*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.AGA.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/BARR*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.BARR.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/BOVAL*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.BOVAL.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/COLNE*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.COLNE.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/CORS*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.CORS.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/CRES*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.CRES.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/FUR*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.FUR.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/GASO*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.GASO.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/GREVE*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.GREVE.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/HAFR*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.HAFR.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/HALS*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.HALS.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/HAUG*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.HAUG.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/HAV*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.HAV.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/Havs*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.Havs.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/INNE*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.INNE.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/KAL*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.KAL.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/KLEV*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.KLEV.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/LANG*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.LANG.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/LILLA*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.LILLA.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/Logs*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.Logstor.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/Lur*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.Lurida.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/MOLU*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.MOLU.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/NISS*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.NISS.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/ORNE*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.ORNE.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/OSTE*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.OSTE.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/PONT*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.PONT.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/RAMS*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.RAMS.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/RIAE*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.RIAE.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/SCO*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.SCO.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/SVALL*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.SVALL.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/SYDK*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.SYDK.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/TOLL*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.TOLL.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/Vade*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.Vade.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/VAGS*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.VAGS.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/VENO*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.VENO.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/WADD*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.WADD.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/ZECE*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.ZECE.depth
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
