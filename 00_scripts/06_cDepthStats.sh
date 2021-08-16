@@ -49,7 +49,7 @@ module load ngstools/20190624
 base=__BASE__
 
 #
-R
+R --slave
 
 #Clean space
 rm(list=ls())
