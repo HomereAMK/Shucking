@@ -163,3 +163,19 @@ https://github.com/therkildsen-lab
 #scaffold8 -  60 452 549
 #scaffold9 -  54 077 584
 #scaffold10 - 53 140 546
+
+
+
+01_infofiles/list.AGA.depth    01_infofiles/list.HALS.depth     01_infofiles/list.Lurida.depth  01_infofiles/list.SYDK.depth
+01_infofiles/list.BARR.depth   01_infofiles/list.HAUG.depth     01_infofiles/list.MOLU.depth    01_infofiles/list.TOLL.depth
+01_infofiles/list.BOVAL.depth  01_infofiles/list.HAV.depth      01_infofiles/list.NISS.depth    01_infofiles/list.Vade.depth
+01_infofiles/list.COLNE.depth  01_infofiles/list.Havs.depth     01_infofiles/list.ORNE.depth    01_infofiles/list.VAGS.depth
+01_infofiles/list.CORS.depth   01_infofiles/list.INNE.depth     01_infofiles/list.OSTE.depth    01_infofiles/list.VENO.depth
+01_infofiles/list.CRES.depth   01_infofiles/list.KAL.depth      01_infofiles/list.PONT.depth    01_infofiles/list.WADD.depth
+01_infofiles/list.FUR.depth    01_infofiles/list.KLEV.depth     01_infofiles/list.RAMS.depth    01_infofiles/list.ZECE.depth
+01_infofiles/list.GASO.depth   01_infofiles/list.LANG.depth     01_infofiles/list.RIAE.depth
+01_infofiles/list.GREVE.depth  01_infofiles/list.LILLA.depth    01_infofiles/list.SCO.depth
+01_infofiles/list.HAFR.depth   01_infofiles/list.Logstor.depth  01_infofiles/list.SVALL.depth
+
+
+potatoe
