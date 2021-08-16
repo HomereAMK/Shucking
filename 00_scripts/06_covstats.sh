@@ -1,12 +1,12 @@
 #!/bin/bash
 #PBS -d /home/projects/dp_00007/people/hmon/Shucking
 #PBS -W group_list=dp_00007 -A dp_00007
-#PBS -N covstats
-#PBS -e 98_log_files/Covstat/covstat.err
-#PBS -o 98_log_files/Covstat/covstat.out
-#PBS -l nodes=4:ppn=40
-#PBS -l walltime=100:00:00
-#PBS -l mem=600gb
+#PBS -N covstats_384
+#PBS -e 98_log_files/Covstat/covstat_384.err
+#PBS -o 98_log_files/Covstat/covstat_384.out
+#PBS -l nodes=3:ppn=20:thinnode
+#PBS -l walltime=10:00:00
+#PBS -l mem=300gb
 #PBS -m n
 #PBS -r n
 
