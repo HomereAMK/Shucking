@@ -177,5 +177,19 @@ https://github.com/therkildsen-lab
 01_infofiles/list.GREVE.depth  01_infofiles/list.LILLA.depth    01_infofiles/list.SCO.depth
 01_infofiles/list.HAFR.depth   01_infofiles/list.Logstor.depth  01_infofiles/list.SVALL.depth
 
-
+BOVAL VAGS   GASO RAMS HAFR SVALL HALS HAV Havs  INNE KAL KLEV LANG LILLA LILLA LILLA Logstor NISS SYDK OSTE ORNE Vade
 potatoe
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+

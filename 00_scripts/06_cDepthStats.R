@@ -7,9 +7,8 @@ library(Rserve)
 library(tidyverse)
 
 #var
-base=__BASE__
 basedir <- "/home/projects/dp_00007/people/hmon/Shucking" # Make sure to edit this to match your $BASEDIR
-bam_list <- read_lines(paste0(basedir, "/01_infofiles/"$base".depth"))
+bam_list <- read_lines(paste0(basedir, "/01_infofiles/list.SVALL.depth"))
 
 for (i in 1:length(bam_list)){
 
@@ -36,28 +35,10 @@ for (i in 1:length(bam_list)){
   }
 }
 print(output)
-write_csv(output, path="/home/projects/dp_00007/people/hmon/Shucking/output_"$base"_Lib2.csv")  #change path
+write_csv(output, path="/home/projects/dp_00007/people/hmon/Shucking/output.SVALL.Lib2.csv")  #change path
 output2 <- output %>%
   mutate(across(where(is.numeric), round, 3))%>% 
-  write_csv(output2, path = "samplespe_per_base_depth_presenceData_"$base".csv")
+  write_csv(output2, path = "samplespe_per_base_depth_presenceData.SVALL.csv")
 
-#load(file = "my_work_space_depth.RData")
-  # Plot the depth distribution
-tibble(total_depth = total_depth, position = 1:length(total_depth))  %>%
-  ggplot(aes(x = position, y = total_depth)) +
-  geom_point(size = 0.1)
 
-ggsave(filename = "depth_distribution_plot_"$base".png")
 
-# Total depth per site across all individuals 
-total_depth_summary <- count(tibble(total_depth = total_depth), total_depth)
-total_presence_summary <- count(tibble(total_presence = total_presence), total_presence)
-total_depth_summary %>%
-  ggplot(aes(x = log(total_depth), y = n)) +
-  geom_point()
-total_presence_summary %>%
-  ggplot(aes(x = total_presence, y = n)) +
-  geom_col()
-ggsave(filename = "depth_persite_acrossind_plot_"$base".png") 
-
-save.image(file = "my_work_space_depth_"$base".RData")
