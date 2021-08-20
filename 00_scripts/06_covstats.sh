@@ -4,9 +4,9 @@
 #PBS -N covstats_384
 #PBS -e 98_log_files/Covstat/covstat_384.err
 #PBS -o 98_log_files/Covstat/covstat_384.out
-#PBS -l nodes=3:ppn=20:thinnode
+#PBS -l nodes=1:ppn=15:thinnode
 #PBS -l walltime=10:00:00
-#PBS -l mem=300gb
+#PBS -l mem=200gb
 #PBS -m n
 #PBS -r n
 
