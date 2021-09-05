@@ -8,7 +8,7 @@ library(tidyverse)
 
 #var
 basedir <- "/home/projects/dp_00007/people/hmon/Shucking" # Make sure to edit this to match your $BASEDIR
-bam_list <- read_lines(paste0(basedir, "/01_infofiles/list.SVALL.depth"))
+bam_list <- read_lines(paste0(basedir, "/01_infofiles/*.depth"))
 
 for (i in 1:length(bam_list)){
 
