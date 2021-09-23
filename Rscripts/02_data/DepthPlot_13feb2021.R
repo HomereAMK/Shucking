@@ -1,9 +1,10 @@
-#setwd(dir = "Desktop/Sequencing_depth_lcWGS/")
+rm(list=ls())
+setwd(dir = "Desktop/Scripts/Shucking/Rscripts/")
 library(tidyverse)
 
 #Load depth csv
 #df <- read_csv('depthPilotLib1.csv')
-df<-read_delim("depthPilotLib1.csv", delim = ";")
+df<-read_delim("Rscripts/02_data/merged_lib1_2.csv", delim = ",")
 
 dfé <- select(df, bamfile, mean_depth, proportion_of_reference_covered) 
 
@@ -29,9 +30,9 @@ ggplot(data = dfé) +
 
 
 ####### Add pop column 
-dfyes <- dfé %>% add_column(pop=substr(dfé$bamfile,0,3))
-write.csv(dfyes, file = "Table_sequencing_Lib1andPilot.csv")
-write.table(dfyes, "Table_sequencing_Lib1andPilot.txt", sep="\t")
+dfyes <- dfé %>% add_column(pop=substr(dfé$bamfile,0,4))
+write.csv(dfyes, file = "Table_depthStats_Lib1_2.csv") #change path
+write.table(dfyes, "Table_depthStats_Lib1_2.csv", sep="\t") #change path
 library(DT)
 library(glue)
 library(tidyverse)
@@ -40,7 +41,7 @@ datatable(
   dfyes, 
   options = list(pageLength = 100)
 )
-saveWidget(dfyes, "Table_Lib1andPilot_SeqDepth.html")
+saveWidget(dfyes, "Table_depthStats_Lib1_2.html") #change path
 
 
 ##############
@@ -108,8 +109,13 @@ ggplot(data = dfé) +
   geom_col(mapping = aes(x = bamfile, y = proportion_of_reference_covered, file = bamfile))
 
 
+
+
+
+#############################LIB1 AND 2 7septembre2021####################################
+setwd("~/Desktop/Scripts/Shucking/Rscripts")
 ####### Add pop column 
-dfyes <- dfé %>% add_column(pop=substr(dfé$bamfile,0,3))
+dfyes <- dfé %>% add_column(pop=substr(dfé$bamfile,0,4))  #first 4 letters = name pop
 
 ###### % ref covered
 p <-  ggplot(data = dfyes) + 
@@ -118,9 +124,10 @@ p
 ##########################
 Prop<-p+labs(x = " samples", y = "Proportion of flat oyster genome covered")+
  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())
-ggsave(filename = "Prop_genomeCoveredLib1andPilot.png")
-# Add horizontal line at mean y = 0.5761
-Prop + geom_hline(yintercept=0.5761, color="red")
+ggsave(filename = "Prop_genomeCoveredLib1and2_sep21.png")
+# Add horizontal line at mean y = 0.61596
+Prop + geom_hline(yintercept=0.61596, color="red")
+ggsave(filename = "Prop_genomeCoveredLib1and2_sep21.png")
 
 ###### mean depth1
 p2 <-  ggplot(data = dfyes) + 
@@ -129,8 +136,9 @@ p2
 MeanD<-p2+labs(x = " samples", y = "Mean depth")+
   theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())
 MeanD
-ggsave(filename = "MeanDepthLib1andPilot.png")
+ggsave(filename = "MeanDepthLib1and2_sep21.png")
 
 summary(dfyes)
 # Add horizontal line at y = 1.2088
-MeanD + geom_hline(yintercept=1.2088, color="red")
+MeanD + geom_hline(yintercept=1.41763, color="red")
+ggsave(filename = "MeanDepthLib1and2_sep21.png")
