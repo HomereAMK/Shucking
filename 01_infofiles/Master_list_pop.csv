@@ -22,6 +22,7 @@ Norway,Ostrevigtjønn_Hauge_I_Dalane,6.250541688,58.32230603,darkblue,Cultured,O
 Norway,Vågstranda,7.167058078,62.615043,darkblue,NA,VAGS
 Norway,Langesand_Sørlandsleia,8.954965771,58.62348802,darkblue,Wild,LANG
 Norway,Bunnefjorden_Oslofjord,10.7245,59.7474,darkblue,Wild,BUNN
+Norway,Dolvågskiten_Agder,8.14725640611987,58.129163479886486,darkblue,Wild,DOLV
 Scotland,Loch_Nell,-5.421022592,56.39505196,purple2,Cultured,NELL
 Scotland,Loch_Ryan,-5.035333,54.952,purple2,Wild,RYAN
 Ireland,Tralee_Bay,-9.935667,52.288,forestgreen,Wild,TRAL
@@ -42,4 +43,5 @@ Sweden,Örnevik,11.31673,58.38378,deepskyblue3,Wild,ORNE
 Sweden,Havstensund,11.16155,58.76366,deepskyblue3,Wild,HAVS
 Sweden,Havstensund(Hatchery_broodstock),11.16155,58.76366,deepskyblue3,Cultured,Havs
 Sweden,Hyppeln_GothenburgArchipelago,11.6169,57.7632,deepskyblue3,Cultured,HYPP
+Sweden,Hallands_Väderö,11.6169,57.7632,deepskyblue3,Wild,HVAD
 USA,Maine,44.08432368,-68.07649021,black,Cultured,USAM
