@@ -7,7 +7,7 @@
 #England="#FEDA8B"
 #Corsica="#A50026"
 #France="#FDB366"
-#"Netherlands"="#EAECCC"
+#"Netherlands"="darkseagreen4"
 #"Scotland"=
 
 #"Norway" ="#364B9A",
@@ -15,7 +15,7 @@
 #"Scotland"="#6EA6CD",
 #"Ireland"="#98CAE1",
 #"Denmark"="#C2E4EF",
-#"Netherlands"="#EAECCC",
+#"Netherlands"="darkseagreen4"
 #"England"="#FEDA8B",
 #"France"="#FDB366",
 #"Spain"= "#F67E4B",
@@ -127,7 +127,7 @@ Noscand <- dt %>%
                         "Netherlands",   "Scotland",  "Ireland"  , "Spain"  ))
 
 cols <- c("Croatia" = "#DD3D2D",  "England" = "#FEDA8B", "Corsica"  = "#A50026", "France"="#FDB366", 
-          "Netherlands"="#EAECCC" ,"Scotland"="#6EA6CD","Spain"= "#F67E4B",  "Ireland"="#98CAE1", 
+          "Netherlands"="darkseagreen4" ,"Scotland"="#6EA6CD","Spain"= "#F67E4B",  "Ireland"="#98CAE1", 
           "Denmark" = "#C2E4EF", "Sweden" ="#4A7BB7" ,"Norway" ="#364B9A")
 
 Europe <- basemap(limits = c(-12, 20, 36, 73),glaciers = FALSE, 
