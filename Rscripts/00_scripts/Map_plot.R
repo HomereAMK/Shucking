@@ -72,6 +72,7 @@ Scand_map_loc2 <- basemap(limits = c(4, 14, 56, 63),glaciers = FALSE,
 Scand_map_loc2
 last_plot()
 ggsave(file = "~/Documents/Campaign_sampling2021/R_map/02_results/Scandinavia28sep2021_13x9.png", width = 13, height = 9, dpi=300)
+
 dev.off()
 
 
