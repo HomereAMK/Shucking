@@ -15,11 +15,20 @@ echo Working directory is $PBS_O_WORKDIR
 cd $PBS_O_WORKDIR
 
 #change path for new Novogene data
-for zip in $(ls /home/projects/dp_00007/people/hmon/Novogene/lib2_2/*.zip);
+#for zip in $(ls /home/projects/dp_00007/people/hmon/Novogene/lib2_2/*.zip);
+#do unzip $zip
+#done
+
+for zip in $(ls /home/projects/dp_00007/people/hmon/Novogene/lib3/*.zip);
 do unzip $zip
 done
 
 #change path too and name of receiving dir
-cd /home/projects/dp_00007/people/hmon/Novogene/lib2_2/
+#cd /home/projects/dp_00007/people/hmon/Novogene/lib2_2/
 #mkdir flac_lib2
-find  -name *.fq.gz -exec cp '{}' "./flac_lib2/" ";"
+#find  -name *.fq.gz -exec cp '{}' "./flac_lib2/" ";"
+
+#change path too and name of receiving dir
+cd /home/projects/dp_00007/people/hmon/Novogene/lib3/
+#mkdir temp in lib3 folder
+find  -name *.fq.gz -exec cp '{}' "./temp/" ";"
