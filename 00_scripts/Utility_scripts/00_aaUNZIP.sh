@@ -31,4 +31,4 @@ done
 #change path too and name of receiving dir
 cd /home/projects/dp_00007/people/hmon/Novogene/lib3/
 #mkdir temp in lib3 folder
-find  -name *.fq.gz -exec cp '{}' "./temp/" ";"
+find  -name *.fq.gz -exec scp '{}' "./temp/" ";"
