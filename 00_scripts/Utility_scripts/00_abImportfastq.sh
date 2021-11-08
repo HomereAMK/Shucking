@@ -12,3 +12,4 @@
 
 #cp fq.gz
 scp /home/projects/dp_00007/people/hmon/Novogene/Raw_data_verified/All_lib/*.fq.gz ./02_data
+scp /home/projects/dp_00007/people/hmon/Novogene/lib3/temp/*.fq.gz ./02_data
