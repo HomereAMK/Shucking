@@ -36,7 +36,7 @@ module load fastqc/0.11.8
 chmod +x 00_scripts/02_trimmomatic_launch.sh
 ```
 ```
-qsub 00_scripts/02_trimmomatic_launch.sh
+00_scripts/02_trimmomatic_launch.sh
 ```
 
 ### 02-AdapterRemoval
