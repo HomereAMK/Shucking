@@ -4,9 +4,9 @@
 #PBS -N bwa__BASE__
 #PBS -e 98_log_files/Map/bwa__BASE__.err
 #PBS -o 98_log_files/Map/bwa__BASE__.out
-#PBS -l nodes=2:ppn=10:thinnode
-#PBS -l walltime=00:05:00:00
-#PBS -l mem=60g
+#PBS -l nodes=1:ppn=4:thinnode
+#PBS -l walltime=00:08:00:00
+#PBS -l mem=12g
 #PBS -m n
 #PBS -r n
 

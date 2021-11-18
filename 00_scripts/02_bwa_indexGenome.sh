@@ -4,9 +4,9 @@
 #PBS -N IndexGenome
 #PBS -e 98_log_files/Map/IndexGenome.err
 #PBS -o 98_log_files/Map/IndexGenome.out
-#PBS -l nodes=2:ppn=4:thinnode
+#PBS -l nodes=1:ppn=4:thinnode
 #PBS -l walltime=00:04:00:00
-#PBS -l mem=100g
+#PBS -l mem=20g
 #PBS -m n
 #PBS -r n
 

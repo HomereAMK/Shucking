@@ -4,9 +4,9 @@
 #PBS -N fastqc
 #PBS -o 98_log_files/FastQC/__BASE__fastqc.out
 #PBS -e 98_log_files/FastQC/__BASE__fastqc.err
-#PBS -l nodes=1:ppn=8 # number of nodes, til 28
+#PBS -l nodes=1:ppn=4 # number of nodes, til 28
 #PBS -l walltime=01:00:00
-#PBS -l mem=20g
+#PBS -l mem=8g
 #PBS -m n
 #PBS -r n
 
