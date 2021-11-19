@@ -1,9 +1,9 @@
 #!/bin/bash
 #PBS -d /home/projects/dp_00007/people/hmon/Shucking
 #PBS -W group_list=dp_00007 -A dp_00007
-#PBS -N indelreal__BASE__
-#PBS -o 98_log_files/IndelRealign/__BASE__indelreal.out
-#PBS -e 98_log_files/IndelRealign/__BASE__indelreal.err
+#PBS -N indelreal__q20BASE__
+#PBS -o 98_log_files/IndelRealign/__BASE__q20indelreal.out
+#PBS -e 98_log_files/IndelRealign/__BASE__q20indelreal.err
 #PBS -l nodes=1:ppn=8 # number of nodes, til 28
 #PBS -l walltime=100:00:00
 #PBS -l mem=20g
