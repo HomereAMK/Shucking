@@ -49,7 +49,7 @@ base=__BASE__
 #samtools faidx $GENOME
 
 # Index bam files
-samtools index "$DATAINPUT"/"$base".nocig.dedup_clipoverlap.minq10.bam 
+samtools index "$DATAINPUT"/"$base".nocig.dedup_clipoverlap.minq20.bam 
 
 ## Create list of potential in-dels nocig
 java -jar /services/tools/gatk/3.8-0/GenomeAnalysisTK.jar \
