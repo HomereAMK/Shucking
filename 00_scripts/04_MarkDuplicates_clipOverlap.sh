@@ -37,29 +37,29 @@ base=__BASE__
 
 #scripts MarkDuplicates
 java -jar /services/tools/picard-tools/2.25.2/picard.jar MarkDuplicatesWithMateCigar \
-I="$DATAINPUT"/"$base".sort.minq10.bam \
-O="$DATAOUTPUT"/"$base".cig.dedup.minq10.bam \
+I="$DATAINPUT"/"$base".sort.minq20.bam \
+O="$DATAOUTPUT"/"$base".cig.dedup.minq20.bam \
 M="$DATAOUTPUT"/"$base".duprmmetrics.txt \
 REMOVE_DUPLICATES=true VALIDATION_STRINGENCY=SILENT
 
 #scripts ClipOverlap
 /services/tools/bamutil/1.0.14/bam clipOverlap \
---in "$DATAOUTPUT"/"$base".cig.dedup.minq10.bam \
---out "$DATAOUTPUT"/"$base".cig.dedup_clipoverlap.minq10.bam \
+--in "$DATAOUTPUT"/"$base".cig.dedup.minq20.bam \
+--out "$DATAOUTPUT"/"$base".cig.dedup_clipoverlap.minq20.bam \
 --stats
 
 
 #tryout with NO CIGAR on MarkDuplicates
 java -jar /services/tools/picard-tools/2.25.2/picard.jar MarkDuplicates \
-I="$DATAINPUT"/"$base".sort.minq10.bam \
-O="$DATAOUTPUT"/"$base".nocig.dedup.minq10.bam \
+I="$DATAINPUT"/"$base".sort.minq20.bam \
+O="$DATAOUTPUT"/"$base".nocig.dedup.minq20.bam \
 M="$DATAOUTPUT"/"$base".duprmmetrics.txt \
 REMOVE_DUPLICATES=true VALIDATION_STRINGENCY=SILENT
 
 #scripts ClipOverlap with NO CIGAR on MarkDuplicates
 /services/tools/bamutil/1.0.14/bam clipOverlap \
---in "$DATAOUTPUT"/"$base".nocig.dedup.minq10.bam \
---out "$DATAOUTPUT"/"$base".nocig.dedup_clipoverlap.minq10.bam \
+--in "$DATAOUTPUT"/"$base".nocig.dedup.minq20.bam \
+--out "$DATAOUTPUT"/"$base".nocig.dedup_clipoverlap.minq20.bam \
 --stats
 
 #KEPT the nocig 
