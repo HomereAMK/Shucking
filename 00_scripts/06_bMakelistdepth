@@ -5,7 +5,7 @@ ls $BAMSDEPTH > list_depth
 #ls $BAMSDEPTH > list_testdepth
 
 
-BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/AGA*_depth.gz
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/AGAB*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.AGAB.depth
 
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/BARR*_depth.gz
@@ -14,15 +14,17 @@ ls $BAMSDEPTH > 01_infofiles/list.BARR.depth
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/BOVA*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.BOVA.depth
 
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/BUNN*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.BUNN.depth
+
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/COLN*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.COLN.depth
 
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/CORS*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.CORS.depth
 
-BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/HFJO*_depth.gz
-ls $BAMSDEPTH > 01_infofiles/list.HFJO.depth
-
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/CLEW*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.CLEW.depth
 
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/CRES*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.CRES.depth
@@ -36,6 +38,9 @@ ls $BAMSDEPTH > 01_infofiles/list.GASO.depth
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/GREV*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.GREV.depth
 
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/HFJO*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.HFJO.depth
+
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/HAFR*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.HAFR.depth
 
@@ -48,6 +53,9 @@ ls $BAMSDEPTH > 01_infofiles/list.HAUG.depth
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/HAV*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.HAV.depth
 
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/HAV*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.HYPP.depth
+
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/Havs*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.Havs.depth
 
@@ -59,6 +67,9 @@ ls $BAMSDEPTH > 01_infofiles/list.INNE.depth
 
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/KALV*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.KALV.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/KLEV*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.KLEV.depth
 
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/NELL*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.NELL.depth
@@ -96,8 +107,8 @@ ls $BAMSDEPTH > 01_infofiles/list.NISS.depth
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/ORNE*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.ORNE.depth
 
-BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/OSTE*_depth.gz
-ls $BAMSDEPTH > 01_infofiles/list.OSTE.depth
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/OSTR*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.OSTR.depth
 
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/PONT*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.PONT.depth
@@ -108,9 +119,6 @@ ls $BAMSDEPTH > 01_infofiles/list.RAMS.depth
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/RIAE*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.RIAE.depth
 
-BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/SCO*_depth.gz
-ls $BAMSDEPTH > 01_infofiles/list.SCO.depth
-
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/SVAL*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.SVAL.depth
 
@@ -119,6 +127,9 @@ ls $BAMSDEPTH > 01_infofiles/list.SYDK.depth
 
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/TOLL*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.TOLL.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/TRAL*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.TRAL.depth
 
 BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/VADE*_depth.gz
 ls $BAMSDEPTH > 01_infofiles/list.VADE.depth
