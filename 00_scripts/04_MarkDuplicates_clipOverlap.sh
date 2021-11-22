@@ -4,9 +4,9 @@
 #PBS -N markdupnClip__BASE__
 #PBS -e 98_log_files/DuplicateClip/__BASE__markdnClip.err
 #PBS -o 98_log_files/DuplicateClip/__BASE__markdnClip.out
-#PBS -l nodes=1:ppn=8 # number of nodes, til 28
-#PBS -l walltime=02:00:00
-#PBS -l mem=20g
+#PBS -l nodes=1:ppn=25 # number of nodes, til 28
+#PBS -l walltime=20:00:00
+#PBS -l mem=80g
 #PBS -m n
 #PBS -r n
 

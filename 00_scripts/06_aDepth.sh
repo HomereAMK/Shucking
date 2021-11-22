@@ -4,7 +4,7 @@
 #PBS -N bam_depth
 #PBS -e 98_log_files/Covstat/__BASE__depth.err
 #PBS -o 98_log_files/Covstat/__BASE__depth.out
-#PBS -l nodes=1:ppn=4:thinnode
+#PBS -l nodes=1:ppn=8:thinnode
 #PBS -l walltime=100:00:00
 #PBS -l mem=16gb
 #PBS -m n
