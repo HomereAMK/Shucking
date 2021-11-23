@@ -32,5 +32,5 @@ REF=01_infofiles/fileOegenome10scaffoldC3G.fasta
 base=__BASE__
 
 ##downsampled Arno 1X https://odelaneau.github.io/GLIMPSE/tutorial_b38.html#run_preliminaries
-samtools view -T "$REF" -s 1.6 -bo "$DATAOUTPUT"/"$base".1.6X.bam "$DATAINPUT"/"$base".bam
-samtools index "$DATAOUTPUT"/"$base".1X.bam
+samtools view -T "$REF" -s 1.5 -bo "$DATAOUTPUT"/"$base".1.5X.bam "$DATAINPUT"/"$base".bam
+samtools index "$DATAOUTPUT"/"$base".1.5X.bam
