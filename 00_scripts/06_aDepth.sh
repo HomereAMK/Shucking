@@ -32,7 +32,7 @@ base=__BASE__
 ######################################################################################################################
 samtools depth -aa 06_realigned/"$base".nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bam | cut -f 3 | gzip > 07_depth/"$base"_depth.gz
 
-#samtools depth -aa USAM_MORL/"$base".nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.1.5X.bam | cut -f 3 | gzip > 07_depth/"$base"_depth.gz
+#samtools depth -aa USAM_MORL/"$base".nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.1.5X.bam | cut -f 3 | gzip > 07_depth/"$base".1.5X_depth.gz
 
 
 #file=Vade_02_EKDL210005548-1a-AK11630-AK16248_HHJKNDSX2_L4

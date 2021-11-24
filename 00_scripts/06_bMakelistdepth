@@ -162,9 +162,15 @@ ls $BAMSDEPTH > 01_infofiles/list.MORL.depth
 
 
 
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/USAM*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.USAM.depth
 
 
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/MORL*.1.5X_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.MORL.1.5X.depth
 
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/USAM*.1.5X_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.USAM.1.5X.depth
 
 
 
