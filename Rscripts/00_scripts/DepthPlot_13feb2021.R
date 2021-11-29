@@ -6,7 +6,7 @@ library(tidyverse)
 #Load depth csv
 #df <- read_csv('depthPilotLib1.csv')
 #df<-read_delim("Desktop/Scripts/Shucking/Rscripts/02_data/384_statsDepth.Lib2.csv", delim = ";")
-df<-read_csv("Desktop/Scripts/Shucking/Rscripts/02_data/384_statsDepth.Lib2.csv")
+df<-read_csv("~/Desktop/Scripts/Shucking/Rscripts/02_data/Lib3_usamorl.csv")
 dfé <- select(df, bamfile, mean_depth, proportion_of_reference_covered) 
 
 #remove path bamfile
@@ -32,7 +32,7 @@ summary(dfé)
 
 ####### Add pop column 
 dfyes <- dfé %>% add_column(pop=substr(dfé$bamfile,0,3))
-write.csv(dfyes, file = "Desktop/Scripts/Shucking/Rscripts/03_results/Table_sequencing_Lib2andPilot.csv")
+write.csv(dfyes, file = "~/Desktop/Scripts/Shucking/Rscripts/03_results/Table_sequencing_Lib3_usamMorl.csv")
 #write.table(dfyes, "Table_sequencing_Lib1andPilot.txt", sep="\t")
 library(DT)
 library(glue)
@@ -42,19 +42,22 @@ datatable(
   dfyes, 
   options = list(pageLength = 100)
 )
-saveWidget(dfyes, "Desktop/Scripts/Shucking/Rscripts/03_results/Table_Lib2.stats.Depth.html")
+saveWidget(dfyes, "~/Desktop/Scripts/Shucking/Rscripts/03_results/Table_Lib3.usamMorl.stats.Depth.html")
 
 
 ##############
 library(RColorBrewer)
 # Define the number of colors you want
-nb.cols <- 18
-mycolors <- colorRampPalette(brewer.pal(8, "Set3"))(nb.cols)
+library(RColorBrewer)
+n <- 60
+qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
+col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
+col <- col_vector[sample(1:50)]
 # Create a ggplot with 18 colors 
 # Use scale_fill_manual
 p3 <-ggplot(dfyes) + 
   geom_col(mapping=aes(x=bamfile, y=mean_depth, fill = pop) +
-             scale_fill_manual(values = mycolors) +
+             scale_fill_manual(values = col) +
              theme_minimal() +
              theme(legend.position = "top"))
 p3
@@ -117,7 +120,7 @@ summary(dfyes) # to get the yintercept for Mean_depth plot and prop_genom_cov
 Prop<-p+labs(x = " samples", y = "Proportion of flat oyster genome covered")+
  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())
 Prop + geom_hline(yintercept=0.62864, color="red")
-ggsave(filename = "Desktop/Scripts/Shucking/Rscripts/03_results/Prop_genomeCoveredLib2.png") #change path
+ggsave(filename = "~/Desktop/Scripts/Shucking/Rscripts/03_results/Prop_genomeCoveredLib3.pdf") #change path
 # Add horizontal line at mean y = 0.5761
 
 ###### mean depth1
