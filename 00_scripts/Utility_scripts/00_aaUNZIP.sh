@@ -23,12 +23,13 @@ for zip in $(ls /home/projects/dp_00007/people/hmon/Novogene/lib3/*.zip);
 do unzip $zip
 done
 
+
 #change path too and name of receiving dir
 #cd /home/projects/dp_00007/people/hmon/Novogene/lib2_2/
 #mkdir flac_lib2
 #find  -name *.fq.gz -exec cp '{}' "./flac_lib2/" ";"
 
 #change path too and name of receiving dir
-cd /home/projects/dp_00007/people/hmon/Novogene/lib3/
+cd /home/projects/dp_00007/people/hmon/Novogene/lib4/
 #mkdir temp in lib3 folder
 find  -name *.fq.gz -exec scp '{}' "./temp/" ";"
