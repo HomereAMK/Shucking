@@ -250,16 +250,10 @@ for file in 06_realigned/KALVV*; do
     mv "$file" "${file/KALVV/KALV}"
 done
 
-for file in *.fq.gz; do
-awk -vFS="" -vOFS="" '{$6=$3"_"}1' $file
-done
 
 
-find -type f -iname "*.gz" -execdir rename -nv -- 's|\./....|$&_|' {} +
-find -type f -iname "*.gz" -execdir bash -c 'echo mv -- "$0" "${0:0:4}"."${0:4}"' {} \;
-find -type f -iname "*.gz" -exec rename -nv -- 's|.*/....\K|_|' {} +
-mmv '?????*' '#1#2#3#4_#5'
 
-for f in *.gz ; do
-  mv "$f" "${f::4}_${f:4:100}"
-done
+#formatting loop 4char Pop
+#for f in *.gz ; do
+# mv "$f" "${f::4}_${f:4:100}"
+#done
