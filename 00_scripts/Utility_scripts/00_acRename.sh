@@ -15,8 +15,27 @@ for file in 02_data/AGA*.fq.gz; do
     mv "$file" "${file/AGA/AGAB}"
 done
 
+for file in AGA*.fq.gz; do
+    mv "$file" "${file/AGA/AGAB}"
+done
 for file in 02_data/BOVAL*.fq.gz; do
     mv "$file" "${file/BOVAL/BOVA}"
+done
+
+for file in Bova*.fq.gz; do
+    mv "$file" "${file/Bova/BOVA}"
+done
+
+for file in Boval*.fq.gz; do
+    mv "$file" "${file/Boval/BOVA}"
+done
+
+for file in 02_data/Cres*.fq.gz; do
+    mv "$file" "${file/Cres/CRES}"
+done
+
+for file in 02_data/Dolv*.fq.gz; do
+    mv "$file" "${file/Dolv/DOLV}"
 done
 
 for file in 02_data/GREVE*.fq.gz; do
@@ -25,6 +44,10 @@ done
 
 for file in 02_data/SVALL*.fq.gz; do
     mv "$file" "${file/SVALL/SVAL}"
+done
+
+for file in Svall*.fq.gz; do
+    mv "$file" "${file/Svall/SVAL}"
 done
 
 for file in 02_data/Logstor*.fq.gz; do
@@ -51,6 +74,78 @@ for file in 02_data/KAL*.fq.gz; do
     mv "$file" "${file/KAL/KALV}"
 done
 
+for file in 02_data/Inne*.fq.gz; do
+    mv "$file" "${file/Inne/INNE}"
+done
+
+for file in 02_data/Kalv*.fq.gz; do
+    mv "$file" "${file/Kalv/KALV}"
+done
+
+for file in 02_data/Lill2*.fq.gz; do
+    mv "$file" "${file/Lill2/LILL}"
+done
+
+for file in Lill2*.fq.gz; do
+    mv "$file" "${file/Lill2/LILL}"
+done
+
+for file in 02_data/Nell*.fq.gz; do
+    mv "$file" "${file/Nell/NELL}"
+done
+
+for file in 02_data/Orie*.fq.gz; do
+    mv "$file" "${file/Orie/ORIS}"
+done
+
+for file in Orie*.fq.gz; do
+    mv "$file" "${file/Orie/ORIS}"
+done
+
+
+for file in 02_data/Ost*.fq.gz; do
+    mv "$file" "${file/Ost/OSTE}"
+done
+
+for file in OSTEe*.fq.gz; do
+    mv "$file" "${file/OSTEe/OSTE}"
+done
+
+for file in 02_data/Oste*.fq.gz; do
+    mv "$file" "${file/Oste/OSTE}"
+done
+
+for file in oste*.fq.gz; do
+    mv "$file" "${file/oste/OSTE}"
+done
+
+for file in 02_data/Molu*.fq.gz; do
+    mv "$file" "${file/Molu/MOLU}"
+done
+
+for file in 02_data/Rams*.fq.gz; do
+    mv "$file" "${file/Rams/RAMS}"
+done
+
+for file in 02_data/Riae*.fq.gz; do
+    mv "$file" "${file/Riae/RIAE}"
+done
+
+for file in 02_data/Svall*.fq.gz; do
+    mv "$file" "${file/Svall/SVALL}"
+done
+
+for file in 02_data/This*.fq.gz; do
+    mv "$file" "${file/This/THIS}"
+done
+
+for file in 02_data/Toll*.fq.gz; do
+    mv "$file" "${file/Toll/TOLL}"
+done
+
+for file in 02_data/Zece*.fq.gz; do
+    mv "$file" "${file/Zece/ZECE}"
+done
 
 for file in 02_data/Veno*.fq.gz; do
     mv "$file" "${file/Veno/VENO}"
@@ -81,9 +176,31 @@ for file in 02_data/COLNE*.fq.gz; do
     mv "$file" "${file/COLNE/COLN}"
 done
 
+for file in 02_data/Colne*.fq.gz; do
+    mv "$file" "${file/Colne/COLN}"
+done
+
+for file in Colne*.fq.gz; do
+    mv "$file" "${file/Colne/COLN}"
+done
+
+for file in 02_data/Gaso*.fq.gz; do
+    mv "$file" "${file/Gaso/GASO}"
+done
+
+
+for file in 02_data/Colne*.fq.gz; do
+    mv "$file" "${file/Colne/COLN}"
+done
+
 for file in 02_data/HALS_swe*.fq.gz; do
     mv "$file" "${file/HALS_swe/HFJO}"
 done
+
+for file in 02_data/Hals.fq.gz; do
+    mv "$file" "${file/Hals/HALS}"
+done
+
 
 for file in 02_data/HAV*.fq.gz; do
     mv "$file" "${file/HAV/HAVS}"
@@ -93,6 +210,14 @@ for file in 02_data/Vade*.fq.gz; do
     mv "$file" "${file/Vade/VADE}"
 done
 
+for file in 02_data/Bunn*.fq.gz; do
+    mv "$file" "${file/Bunn/BUNN}"
+done
+
+
+for file in 02_data/Hypp*.fq.gz; do
+    mv "$file" "${file/Hypp/HYPP}"
+done
 
 
 #NO
@@ -116,4 +241,18 @@ mv 02_data/NO_HAF_01_EKDL200012859-1a-AK10139-AK9682_HNLVYDSXY_L1_2.fq.gz 02_dat
 
 for file in 06_realigned/KALVV*; do
     mv "$file" "${file/KALVV/KALV}"
+done
+
+for file in *.fq.gz; do
+awk -vFS="" -vOFS="" '{$6=$3"_"}1' $file
+done
+
+
+find -type f -iname "*.gz" -execdir rename -nv -- 's|\./....|$&_|' {} +
+find -type f -iname "*.gz" -execdir bash -c 'echo mv -- "$0" "${0:0:4}"."${0:4}"' {} \;
+find -type f -iname "*.gz" -exec rename -nv -- 's|.*/....\K|_|' {} +
+mmv '?????*' '#1#2#3#4_#5'
+
+for f in *.gz ; do
+  mv "$f" "${f::4}_${f:4:100}"
 done
