@@ -103,17 +103,12 @@ for file in Orie*.fq.gz; do
 done
 
 
-for file in 02_data/Ost*.fq.gz; do
-    mv "$file" "${file/Ost/OSTE}"
-done
-
-for file in OSTEe*.fq.gz; do
-    mv "$file" "${file/OSTEe/OSTE}"
-done
-
 for file in 02_data/Oste*.fq.gz; do
     mv "$file" "${file/Oste/OSTE}"
 done
+
+
+
 
 for file in oste*.fq.gz; do
     mv "$file" "${file/oste/OSTE}"
@@ -182,6 +177,18 @@ done
 
 for file in Colne*.fq.gz; do
     mv "$file" "${file/Colne/COLN}"
+done
+
+for file in THIS_01[123456789]*.fq.gz; do
+    mv "$file" "${file/THIS_01/THIS_1}"
+done
+
+for file in This_[13456789]*.fq.gz; do
+    mv "$file" "${file/This_/THIS_0}"
+done
+This_2_
+for file in *.fq.gz; do
+    mv "$file" "${file/__/_}"
 done
 
 for file in 02_data/Gaso*.fq.gz; do
