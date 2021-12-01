@@ -158,6 +158,13 @@ for file in 02_data/OSTE*.fq.gz; do
     mv "$file" "${file/OSTE/OSTR}"
 done
 
+for file in 02_data/AGABB*.fq.gz; do
+    mv "$file" "${file/AGABB/AGAB}"
+done
+
+for file in 06_realigned/Pont*.bam; do
+    mv "$file" "${file/Pont/PONT}"
+done
 
 for file in 02_data/Sydk*.fq.gz; do
     mv "$file" "${file/Sydk/SYDK}"

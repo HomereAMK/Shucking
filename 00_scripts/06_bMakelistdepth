@@ -175,10 +175,18 @@ ls $BAMSDEPTH > 01_infofiles/list.USAM.1.5X.depth
 
 
 
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/ORIS*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.ORIS.depth
+
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/THIS*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.THIS.depth
 
 
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/DOLV*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.DOLV.depth
 
-
+BAMSDEPTH=/home/projects/dp_00007/people/hmon/Shucking/07_depth/HVAD*_depth.gz
+ls $BAMSDEPTH > 01_infofiles/list.HVAD.depth
 
 
 
