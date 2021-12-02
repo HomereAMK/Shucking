@@ -36,17 +36,17 @@ DATAINPUT="04_mapped"
 base=__BASE__
 
 #scripts MarkDuplicates
-java -jar /services/tools/picard-tools/2.25.2/picard.jar MarkDuplicatesWithMateCigar \
-I="$DATAINPUT"/"$base".sort.minq20.bam \
-O="$DATAOUTPUT"/"$base".cig.dedup.minq20.bam \
-M="$DATAOUTPUT"/"$base".duprmmetrics.txt \
-REMOVE_DUPLICATES=true VALIDATION_STRINGENCY=SILENT
+#java -jar /services/tools/picard-tools/2.25.2/picard.jar MarkDuplicatesWithMateCigar \
+#I="$DATAINPUT"/"$base".sort.minq20.bam \
+#O="$DATAOUTPUT"/"$base".cig.dedup.minq20.bam \
+#M="$DATAOUTPUT"/"$base".duprmmetrics.txt \
+#REMOVE_DUPLICATES=true VALIDATION_STRINGENCY=SILENT
 
 #scripts ClipOverlap
-/services/tools/bamutil/1.0.14/bam clipOverlap \
---in "$DATAOUTPUT"/"$base".cig.dedup.minq20.bam \
---out "$DATAOUTPUT"/"$base".cig.dedup_clipoverlap.minq20.bam \
---stats
+#/services/tools/bamutil/1.0.14/bam clipOverlap \
+#--in "$DATAOUTPUT"/"$base".cig.dedup.minq20.bam \
+#--out "$DATAOUTPUT"/"$base".cig.dedup_clipoverlap.minq20.bam \
+#--stats
 
 
 #tryout with NO CIGAR on MarkDuplicates
