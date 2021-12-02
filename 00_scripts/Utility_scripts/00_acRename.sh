@@ -186,15 +186,8 @@ for file in Colne*.fq.gz; do
     mv "$file" "${file/Colne/COLN}"
 done
 
-for file in THIS_01[123456789]*.fq.gz; do
-    mv "$file" "${file/THIS_01/THIS_1}"
-done
 
-for file in This_[13456789]*.fq.gz; do
-    mv "$file" "${file/This_/THIS_0}"
-done
-This_2_
-for file in *.fq.gz; do
+for file in 02_data/*.fq.gz; do
     mv "$file" "${file/__/_}"
 done
 
