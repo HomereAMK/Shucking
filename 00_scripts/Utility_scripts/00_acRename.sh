@@ -246,8 +246,8 @@ mv 02_data/NO_HAF_01_EKDL200012859-1a-AK10139-AK9682_HNLVYDSXY_L1_2.fq.gz 02_dat
 #done
 
 
-for file in 06_realigned/KALVV*; do
-    mv "$file" "${file/KALVV/KALV}"
+for file in 02_data/Hals*; do
+    mv "$file" "${file/Hals/HALS}"
 done
 
 
