@@ -1,4 +1,4 @@
-mv,BUNN_13_EKDL210007863-1a-AK19072-AK23726_HLNT5DSX2_L2.nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bam,../../replicates_low_bam
+mv,BUNN_13*,../../replicates_low_bam
 mv,CLEW_07_EKDL210007862-1a-AK16191-AK16192_HLNT5DSX2_L2.nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bam,../../replicates_low_bam
 mv,CLEW_08_EKDL210007862-1a-AK16207-AK16208_HLNT5DSX2_L2.nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bam,../../replicates_low_bam
 mv,CRES_12_EKDL210009123-1a-AK19017-AK23748_HTVH3DSX2_L3.nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bam,../../replicates_low_bam
@@ -24,3 +24,8 @@ mv,ORNE_15_EKDL210004790-1a-AK11177-AK16280_HHJYYDSX2_L3.nocig.dedup_clipoverlap
 mv,TRAL_08_EKDL210007862-1a-AK16177-AK16178_HLNT5DSX2_L2.nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bam,../../replicates_low_bam
 mv,TRAL_10_EKDL210007862-1a-AK16209-AK16210_HLNT5DSX2_L2.nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bam,../../replicates_low_bam
 mv,VADE_02_EKDL210005548-1a-AK11630-AK16248_HHJKNDSX2_L4.nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bam,../../replicates_low_bam
+,MOLU_03,
+,VENO_03,
+,CRES_08*,
+,b01_*,
+,d01_*,
