@@ -257,3 +257,33 @@ done
 #for f in *.gz ; do
 # mv "$f" "${f::4}_${f:4:100}"
 #done
+
+#high coverage prefix cleanup
+for file in orie_*; do
+    mv "$file" "${file/orie/ORIS}"
+done
+
+for file in orie_*; do
+    mv "$file" "${file/orie/ORIS}"
+done
+
+for file in HYPP_6*; do
+    mv "$file" "${file/HYPP_6/HYPP_06}"
+done
+
+for file in HYPP_4*; do
+    mv "$file" "${file/HYPP_4/HYPP_04}"
+done
+
+for file in LURIDA*; do
+    mv "$file" "${file/LURIDA/LURI}"
+done
+
+for file in Pont*; do
+    mv "$file" "${file/Pont/PONT}"
+done
+
+
+for file in SPA13*; do
+    mv "$file" "${file/SPA13_pont13/PONT_13}"
+done

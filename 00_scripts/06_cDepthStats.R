@@ -39,7 +39,7 @@ print(output)
 write_csv(output, path="/home/projects/dp_00007/people/hmon/Shucking/output.RIAE.Lib2.csv")  #change path
 output2 <- output %>%
   mutate(across(where(is.numeric), round, 3))%>% 
-  write_csv(output2, path = "samplespe_per_base_depth_presenceData.RIAE.Lib2.csv")
+  write_csv(output2, file = "samplespe_per_base_depth_presenceData.RIAE.Lib2.csv")
 
 #Clean space
 rm(list=ls())
