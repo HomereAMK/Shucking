@@ -18,3 +18,45 @@ mv /home/projects/dp_00007/people/hmon/Shucking/06_realigned/OSTR_22_EKDL2100091
 mv /home/projects/dp_00007/people/hmon/Shucking/06_realigned/COLN_11_EKDL200012859-1a-AK8204-AK9482_HNLVYDSXY_L1.all_samples_for_indel_realigner.nocig.minq20.intervals /home/projects/dp_00007/people/hmon/Shucking/06_realigned/ORNE_99_EKDL200012859-1a-AK8204-AK9482_HNLVYDSXY_L1.all_samples_for_indel_realigner.nocig.minq20.intervals
 mv /home/projects/dp_00007/people/hmon/Shucking/06_realigned/COLN_11_EKDL200012859-1a-AK8204-AK9482_HNLVYDSXY_L1.nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bai /home/projects/dp_00007/people/hmon/Shucking/06_realigned/ORNE_99_EKDL200012859-1a-AK8204-AK9482_HNLVYDSXY_L1.nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bai
 mv /home/projects/dp_00007/people/hmon/Shucking/06_realigned/COLN_11_EKDL200012859-1a-AK8204-AK9482_HNLVYDSXY_L1.nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bam /home/projects/dp_00007/people/hmon/Shucking/06_realigned/ORNE_99_EKDL200012859-1a-AK8204-AK9482_HNLVYDSXY_L1.nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bam
+
+
+####
+for file in 03_trimmed/OSTR_21*; do
+    mv "$file" "${file/OSTR_21/SYDK_21}"
+done
+for file in 04_mapped/OSTR_21*; do
+    mv "$file" "${file/OSTR_21/SYDK_21}"
+done
+for file in 05_dedup/OSTR_21*; do
+    mv "$file" "${file/OSTR_21/SYDK_21}"
+done
+####
+for file in 03_trimmed/OSTR_22*; do
+    mv "$file" "${file/OSTR_22/SYDK_22}"
+done
+for file in 04_mapped/OSTR_22*; do
+    mv "$file" "${file/OSTR_22/SYDK_22}"
+done
+for file in 05_dedup/OSTR_22*; do
+    mv "$file" "${file/OSTR_22/SYDK_22}"
+done
+####
+for file in 03_trimmed/OSTR_16_EKDL210009122*; do
+    mv "$file" "${file/OSTR_16/SYDK_16}"
+done
+for file in 04_mapped/OSTR_16_EKDL210009122*; do
+    mv "$file" "${file/OSTR_16/SYDK_16}"
+done
+for file in 05_dedup/OSTR_16_EKDL210009122*; do
+    mv "$file" "${file/OSTR_16/SYDK_16}"
+done
+####
+for file in 03_trimmed/COLN_11*; do
+    mv "$file" "${file/COLN_11/ORNE_99}"
+done
+for file in 04_mapped/COLN_11*; do
+    mv "$file" "${file/COLN_11/ORNE_99}"
+done
+for file in 05_dedup/COLN_11*; do
+    mv "$file" "${file/COLN_11/ORNE_99}"
+done
