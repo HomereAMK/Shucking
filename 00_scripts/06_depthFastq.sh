@@ -46,7 +46,7 @@ samtools stats 04_mapped/"$base".sort.minq20.bam -@ 12 | grep ^SN | cut -f 2- | 
 #deduplicate mapped bases
 samtools stats 05_dedup/"$base".nocig.dedup_clipoverlap.minq20.bam -@ 12 | grep ^SN | cut -f 2- | grep "^bases mapped (cigar)" | cut -f 2  > 07_depth/"$base".count_bam_2.tmp
 #realigned around indels mapped bases
-samtools stats 06_realigned/"$base"..nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bam -@ 12 | grep ^SN | cut -f 2- | grep "^bases mapped (cigar)" | cut -f 2  > 07_depth/"$base".count_bam_3.tmp
+samtools stats 06_realigned/"$base".nocig.dedup_clipoverlap.minq20_minq20.nocig.realigned.bam -@ 12 | grep ^SN | cut -f 2- | grep "^bases mapped (cigar)" | cut -f 2  > 07_depth/"$base".count_bam_3.tmp
 #population tag
 echo 02_data/"$base"_1.fq.gz |awk '{split($0,a,"_"); print a[2]}' | awk '{split($0,a,"/"); print a[2]}' > 07_depth/"$base".count_pop_1.tmp
 
