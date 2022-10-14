@@ -60,3 +60,72 @@ done
 for file in 05_dedup/COLN_11*; do
     mv "$file" "${file/COLN_11/ORNE_99}"
 done
+
+########
+RIAE_05_EKDL210004788
+
+for file in  02_data/RIAE_05_EKDL210004788*; do
+    mv "$file" "${file/RIAE_05/RIAE_04}"
+done
+
+#########
+for file in  06_realigned/LOGS_12_EKDL210004788-1a-AK11401-AK7949_HHJYYDSX2_L1*; do
+    mv "$file" "${file/LOGS_12/LOGS_99}"
+done
+#######
+PONT_03_EKDL210007862-1a-AK16197-AK16198_HLNT5DSX2_L2
+
+PONT_10_EKDL210004789
+
+PONT_20_EKDL210007862
+############
+for file in  02_data/PONT_03_EKDL210007862-1a-AK16197-AK16198_HLNT5DSX2_L2*; do
+    mv "$file" "${file/PONT_03/PONT_99}"
+done
+for file in   03_trimmed/PONT_03_EKDL210007862-1a-AK16197-AK16198_HLNT5DSX2_L2*; do
+    mv "$file" "${file/PONT_03/PONT_99}"
+done
+
+for file in   04_mapped/PONT_03_EKDL210007862-1a-AK16197-AK16198_HLNT5DSX2_L2*; do
+    mv "$file" "${file/PONT_03/PONT_99}"
+done
+
+for file in   05_dedup/PONT_03_EKDL210007862-1a-AK16197-AK16198_HLNT5DSX2_L2*; do
+    mv "$file" "${file/PONT_03/PONT_99}"
+done
+
+########
+for file in  02_data/PONT_10_EKDL210004789*; do
+    mv "$file" "${file/PONT_10/PONT_98}"
+done
+
+for file in   03_trimmed/PONT_10_EKDL210004789*; do
+    mv "$file" "${file/PONT_10/PONT_98}"
+done
+
+
+for file in   04_mapped/PONT_10_EKDL210004789*; do
+    mv "$file" "${file/PONT_10/PONT_98}"
+done
+
+for file in   05_dedup/PONT_10_EKDL210004789*; do
+    mv "$file" "${file/PONT_10/PONT_98}"
+done
+
+########
+for file in  02_data/PONT_20_EKDL210007862*; do
+    mv "$file" "${file/PONT_20/PONT_97}"
+done
+
+for file in   03_trimmed/PONT_20_EKDL210007862*; do
+    mv "$file" "${file/PONT_20/PONT_97}"
+done
+
+
+for file in   04_mapped/PONT_20_EKDL210007862*; do
+    mv "$file" "${file/PONT_20/PONT_97}"
+done
+
+for file in   05_dedup/PONT_20_EKDL210007862*; do
+    mv "$file" "${file/PONT_20/PONT_97}"
+done

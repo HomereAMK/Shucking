@@ -19,4 +19,4 @@ for i in $(ls 00_scripts/DEPTHFASTQ*sh); do qsub $i; done
 
 #create the receiving txt file
 rm 07_depth/Summary_depth*
-touch 07_depth/Summary_depth_lcWGS_12oct22.txt
+touch 07_depth/Summary_depth_lcWGS_14oct22.txt
