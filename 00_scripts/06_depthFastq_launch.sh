@@ -18,4 +18,5 @@ done
 for i in $(ls 00_scripts/DEPTHFASTQ*sh); do qsub $i; done
 
 #create the receiving txt file
+
 touch 07_depth/Summary_depth_lcWGS_16oct22.txt
