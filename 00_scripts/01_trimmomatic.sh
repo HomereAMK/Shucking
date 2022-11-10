@@ -2,7 +2,7 @@
 #PBS -d /home/projects/dp_00007/people/hmon/Shucking
 #PBS -W group_list=dp_00007
 #PBS -A dp_00007
-#PBS -N trimmomatic
+#PBS -N trimmomatic__BASE__
 #PBS -o 98_log_files/Trim/__BASE__trim.out
 #PBS -e 98_log_files/Trim/__BASE__trim.err
 #PBS -l walltime=00:04:00:00
