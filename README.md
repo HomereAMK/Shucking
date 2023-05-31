@@ -31,11 +31,9 @@ chmod +x 00_scripts/02_trimmomatic_launch.sh
 ```
 
 ### 02-AdapterRemoval
-```
-.
-```
 
-### Bwa-index genome (need to build a script for that)
+
+### Bwa-index genome
 ```
 module load bwa/0.7.15
 bwa index -b bwtsw 01_infofiles/fileOegenome10scaffoldC3G.fasta
@@ -52,9 +50,7 @@ chmod +x 00_scripts/03_bwa_mem_launch.sh
  00_scripts/03_bwa_mem_launch.sh
 ```
 ### 4-MarkDuplicates
-```
-mkdir 05_dedup
-```
+
 
 ### 5-GATK IndelRealigner
 
